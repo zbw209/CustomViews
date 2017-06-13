@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		631C44091EEFAE32003A02EA /* PiechartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 631C44081EEFAE32003A02EA /* PiechartView.m */; };
 		6398E8091ED6B21500A877DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6398E8081ED6B21500A877DC /* AppDelegate.swift */; };
 		6398E80B1ED6B21500A877DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6398E80A1ED6B21500A877DC /* ViewController.swift */; };
 		6398E80E1ED6B21500A877DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6398E80C1ED6B21500A877DC /* Main.storyboard */; };
@@ -14,6 +15,9 @@
 		6398E8131ED6B21500A877DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6398E8111ED6B21500A877DC /* LaunchScreen.storyboard */; };
 		6398E81E1ED6B21500A877DC /* CustomViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6398E81D1ED6B21500A877DC /* CustomViewsTests.swift */; };
 		6398E8291ED6B21500A877DC /* CustomViewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6398E8281ED6B21500A877DC /* CustomViewsUITests.swift */; };
+		6398E8381ED6B2F200A877DC /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6398E8371ED6B2F200A877DC /* CarouselView.swift */; };
+		6398E83A1ED6B4CA00A877DC /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6398E8391ED6B4CA00A877DC /* test.jpg */; };
+		6398E83E1ED6C8C100A877DC /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398E83D1ED6C8C100A877DC /* TestView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		631C44071EEFAE32003A02EA /* PiechartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PiechartView.h; sourceTree = "<group>"; };
+		631C44081EEFAE32003A02EA /* PiechartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PiechartView.m; sourceTree = "<group>"; };
 		6398E8051ED6B21500A877DC /* CustomViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6398E8081ED6B21500A877DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6398E80A1ED6B21500A877DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,11 @@
 		6398E8241ED6B21500A877DC /* CustomViewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomViewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6398E8281ED6B21500A877DC /* CustomViewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewsUITests.swift; sourceTree = "<group>"; };
 		6398E82A1ED6B21500A877DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6398E8371ED6B2F200A877DC /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		6398E8391ED6B4CA00A877DC /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		6398E83B1ED6C8C100A877DC /* CustomViews-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CustomViews-Bridging-Header.h"; path = "电信app轮播3D效果/CustomViews-Bridging-Header.h"; sourceTree = "<group>"; };
+		6398E83C1ED6C8C100A877DC /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		6398E83D1ED6C8C100A877DC /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		631C44061EEFADE2003A02EA /* 饼状图 */ = {
+			isa = PBXGroup;
+			children = (
+				631C44071EEFAE32003A02EA /* PiechartView.h */,
+				631C44081EEFAE32003A02EA /* PiechartView.m */,
+			);
+			path = "饼状图";
+			sourceTree = "<group>";
+		};
 		6398E7FC1ED6B21500A877DC = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +119,13 @@
 			children = (
 				6398E8081ED6B21500A877DC /* AppDelegate.swift */,
 				6398E80A1ED6B21500A877DC /* ViewController.swift */,
+				6398E83B1ED6C8C100A877DC /* CustomViews-Bridging-Header.h */,
 				6398E80C1ED6B21500A877DC /* Main.storyboard */,
 				6398E80F1ED6B21500A877DC /* Assets.xcassets */,
 				6398E8111ED6B21500A877DC /* LaunchScreen.storyboard */,
 				6398E8141ED6B21500A877DC /* Info.plist */,
+				631C44061EEFADE2003A02EA /* 饼状图 */,
+				6398E8361ED6B29D00A877DC /* 电信app轮播3D效果 */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -123,6 +146,17 @@
 				6398E82A1ED6B21500A877DC /* Info.plist */,
 			);
 			path = CustomViewsUITests;
+			sourceTree = "<group>";
+		};
+		6398E8361ED6B29D00A877DC /* 电信app轮播3D效果 */ = {
+			isa = PBXGroup;
+			children = (
+				6398E8391ED6B4CA00A877DC /* test.jpg */,
+				6398E8371ED6B2F200A877DC /* CarouselView.swift */,
+				6398E83C1ED6C8C100A877DC /* TestView.h */,
+				6398E83D1ED6C8C100A877DC /* TestView.m */,
+			);
+			path = "电信app轮播3D效果";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +228,7 @@
 					6398E8041ED6B21500A877DC = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 33JAALQ86U;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					6398E8181ED6B21500A877DC = {
@@ -238,6 +273,7 @@
 				6398E8131ED6B21500A877DC /* LaunchScreen.storyboard in Resources */,
 				6398E8101ED6B21500A877DC /* Assets.xcassets in Resources */,
 				6398E80E1ED6B21500A877DC /* Main.storyboard in Resources */,
+				6398E83A1ED6B4CA00A877DC /* test.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6398E83E1ED6C8C100A877DC /* TestView.m in Sources */,
+				631C44091EEFAE32003A02EA /* PiechartView.m in Sources */,
 				6398E80B1ED6B21500A877DC /* ViewController.swift in Sources */,
+				6398E8381ED6B2F200A877DC /* CarouselView.swift in Sources */,
 				6398E8091ED6B21500A877DC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,11 +452,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 33JAALQ86U;
 				INFOPLIST_FILE = CustomViews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zbw.CustomViews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CustomViews/电信app轮播3D效果/CustomViews-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,11 +468,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 33JAALQ86U;
 				INFOPLIST_FILE = CustomViews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zbw.CustomViews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CustomViews/电信app轮播3D效果/CustomViews-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -512,6 +556,7 @@
 				6398E82F1ED6B21500A877DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6398E8301ED6B21500A877DC /* Build configuration list for PBXNativeTarget "CustomViewsTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +565,7 @@
 				6398E8321ED6B21500A877DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6398E8331ED6B21500A877DC /* Build configuration list for PBXNativeTarget "CustomViewsUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +574,7 @@
 				6398E8351ED6B21500A877DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
