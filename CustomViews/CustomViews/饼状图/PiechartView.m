@@ -28,8 +28,6 @@
         
         CGPoint center = CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2);
         
-        NSLog(@"%s,%d center.x = %f",__FUNCTION__,__LINE__,center.x);
-        
         UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center
                                                             radius:center.x / 2 - 10
                                                         startAngle:-M_PI_2
@@ -38,12 +36,12 @@
         
         CAShapeLayer *shapeLayer = [CAShapeLayer layer];
         _shapeLayer = shapeLayer;
-        shapeLayer.lineWidth = (center.x / 2 - 10) * 2;
+        shapeLayer.lineWidth = (center.x / 2 - 10) * 2 + 1;
         
-        _shapeLayer.backgroundColor = [UIColor redColor].CGColor;
+        _shapeLayer.backgroundColor = [UIColor yellowColor].CGColor;
         
         shapeLayer.fillColor = [UIColor clearColor].CGColor;
-        shapeLayer.strokeColor = [UIColor brownColor].CGColor;
+        shapeLayer.strokeColor = [UIColor yellowColor].CGColor;
         shapeLayer.path = path.CGPath;
         
         
@@ -62,26 +60,41 @@
         secondLayer.lineWidth = (center.x / 2 - 10) * 2;
         secondLayer.path = path.CGPath;
         
-        // 蒙版视图的颜色只跟根视图的背景色一致，手动设置的值无效
+        CAShapeLayer *thirdLayer = [CAShapeLayer layer];
+        thirdLayer.strokeStart = 0.6;
+        thirdLayer.strokeEnd = 0.75;
+        thirdLayer.fillColor = [UIColor clearColor].CGColor;
+        thirdLayer.strokeColor = [UIColor greenColor].CGColor;
+        thirdLayer.lineWidth = (center.x / 2 - 10) * 2;
+        thirdLayer.path = path.CGPath;
         
-        // 动画 跟图层是否设置为蒙版视图无关 、
+        CAShapeLayer *lastLayer = [CAShapeLayer layer];
+        lastLayer.strokeStart = 0.75;
+        lastLayer.strokeEnd = 1;
+        lastLayer.fillColor = [UIColor clearColor].CGColor;
+        lastLayer.strokeColor = [UIColor orangeColor].CGColor;
+        lastLayer.lineWidth = (center.x / 2 - 10) * 2;
+        lastLayer.path = path.CGPath;
+
+        // 蒙版图层的颜色只跟根视图的背景色一致，手动设置的值无效
+        // 设置蒙版图层会改变原有视图layer的显示区域，蒙版图层等于根图层
+        // 动画 跟图层是否设置为蒙版图层无关 、
         //之前错误原因在于fromValue的格式设置错误，需要的是个对象类型，而不是数值类型
 
-//        baseLayer.masksToBounds = YES;
-//        baseLayer.mask = shapeLayer;
-//        [baseLayer addSublayer:shapeLayer];
-//        [self.layer addSublayer:baseLayer];
-        
         self.layer.mask = shapeLayer;
         [self.layer addSublayer:baseLayer];
         [self.layer addSublayer:secondLayer];
+        [self.layer addSublayer:thirdLayer];
+        [self.layer addSublayer:lastLayer];
+        
+//        [self.layer addSublayer:shapeLayer];
+
     }
     return self;
 }
 
 - (void)showAnimation {
-    
-    
+//    return;
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     animation.duration = 3.0;
     animation.fromValue = @(0);
@@ -93,12 +106,5 @@
 
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end

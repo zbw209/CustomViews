@@ -19,12 +19,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
     }
 
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+    }
+    
+    func loadPieView() {
+        let piev = PiechartView.pieChartView(withFrame: self.view.bounds)
+        view.addSubview(piev!)
+        piev?.showAnimation()
     }
     
     func panGestureAction(panGesture : UIPanGestureRecognizer) {
