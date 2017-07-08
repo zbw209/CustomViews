@@ -19,8 +19,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
 
     
@@ -55,22 +53,4 @@ class ViewController: UIViewController {
 }
 
 
-
-//        let center = CGPoint(x: imageView.center.x, y: imageView.frame.origin.y)
-//
-//        imageView.layer.anchorPoint = CGPoint(x: 0.5, y: 0)
-//
-//        imageView.layer.position = center
-//
-//        print(imageView.layer.position)
-
-//        let animate = CABasicAnimation.init(keyPath: "transform.rotation.z")
-//        animate.repeatCount = MAXFLOAT
-//        animate.fromValue = -M_PI_4 //CGAffineTransform(rotationAngle: -(CGFloat)(M_PI_2))
-//        animate.toValue = M_PI_4 //CGAffineTransform(rotationAngle: (CGFloat)(M_PI_2))
-//
-//        animate.duration = 1.0
-//        animate.autoreverses = true
-//        animate.isRemovedOnCompletion = false
-//        imageView.layer.add(animate, forKey: "")
 

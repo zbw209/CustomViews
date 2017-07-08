@@ -12,6 +12,7 @@
 @interface PiechartView ()
 
 @property (nonatomic, strong) CAShapeLayer *shapeLayer;
+
 @end
 
 @implementation PiechartView
